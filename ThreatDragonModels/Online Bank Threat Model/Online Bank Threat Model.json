@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "19cb6c66-9951-4385-b72d-aa646f9a9e0b",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Website Dev",
@@ -154,6 +154,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -237,7 +238,6 @@
               ]
             },
             "id": "d35eca54-75c2-4c8d-b82d-0106dcfc1f77",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Customer",
@@ -270,6 +270,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -353,7 +354,6 @@
               ]
             },
             "id": "57664ff0-60a6-442b-afc4-5f8fd60dde6a",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "Visitor",
@@ -386,6 +386,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -469,7 +470,6 @@
               ]
             },
             "id": "9bf3d50e-077a-4b53-90e1-2ca054a99f0a",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Public Website",
@@ -505,6 +505,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -588,7 +589,6 @@
               ]
             },
             "id": "079593c2-408e-446c-91ea-075241f9e571",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "Authentication",
@@ -624,6 +624,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -707,7 +708,6 @@
               ]
             },
             "id": "5e6be08a-b232-4722-87e1-f877b8e6c435",
-            "zIndex": 6,
             "data": {
               "type": "tm.Process",
               "name": "Transactions",
@@ -746,6 +746,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -829,7 +830,6 @@
               ]
             },
             "id": "d10d7262-037f-4334-a50f-b88d80229a61",
-            "zIndex": 7,
             "data": {
               "type": "tm.Store",
               "name": "Public Webpages",
@@ -869,6 +869,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -952,7 +953,6 @@
               ]
             },
             "id": "3ff50840-e0ef-4d80-b429-f48f48e23e41",
-            "zIndex": 8,
             "data": {
               "type": "tm.Store",
               "name": "Authentication Database",
@@ -992,6 +992,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 9,
             "ports": {
               "groups": {
                 "top": {
@@ -1075,7 +1076,6 @@
               ]
             },
             "id": "6093acb5-df65-4d42-bbb2-250c0120b92a",
-            "zIndex": 9,
             "data": {
               "type": "tm.Store",
               "name": "Transaction Database",
@@ -1840,12 +1840,6 @@
               "cell": "9bf3d50e-077a-4b53-90e1-2ca054a99f0a",
               "port": "48eba415-55ab-4e12-87f9-749b3778c944"
             },
-            "vertices": [
-              {
-                "x": 470,
-                "y": 30
-              }
-            ],
             "tools": {
               "items": [
                 "boundary",
@@ -1855,7 +1849,13 @@
                 "target-arrowhead"
               ],
               "name": null
-            }
+            },
+            "vertices": [
+              {
+                "x": 470,
+                "y": 30
+              }
+            ]
           }
         ],
         "description": "e-bank STRIDE"

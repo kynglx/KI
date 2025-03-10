@@ -1391,7 +1391,7 @@
             "vertices": [
               {
                 "x": 890,
-                "y": 260
+                "y": 270
               }
             ]
           },
@@ -1699,7 +1699,7 @@
             "vertices": [
               {
                 "x": 480,
-                "y": 200
+                "y": 230
               }
             ]
           },
@@ -1811,27 +1811,27 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Restricted Network",
+              "name": "Web Server Boundary",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
             },
             "labels": [
-              "Restricted Network"
+              "Web Server Boundary"
             ],
-            "id": "13cf7199-5321-4968-83a6-947f9a4657e5",
+            "id": "9e0fe673-2ff9-4fd6-a3b9-9156b0bfacf4",
             "source": {
-              "x": 770,
-              "y": -20
+              "x": 317,
+              "y": 20
             },
             "target": {
-              "x": 830,
+              "x": 320,
               "y": 490
             },
             "vertices": [
               {
-                "x": 900,
-                "y": 220
+                "x": 410,
+                "y": 270
               }
             ]
           },
@@ -1843,27 +1843,27 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Web Server Boundary",
+              "name": "Restricted Network",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
             },
             "labels": [
-              "Web Server Boundary"
+              "Restricted Network"
             ],
-            "id": "9e0fe673-2ff9-4fd6-a3b9-9156b0bfacf4",
+            "id": "13cf7199-5321-4968-83a6-947f9a4657e5",
             "source": {
-              "x": 290,
-              "y": -20
+              "x": 810,
+              "y": 0
             },
             "target": {
-              "x": 300,
-              "y": 510
+              "x": 830,
+              "y": 470
             },
             "vertices": [
               {
-                "x": 400,
-                "y": 250
+                "x": 900,
+                "y": 200
               }
             ]
           }

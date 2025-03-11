@@ -251,13 +251,6 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -795,60 +788,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Response",
-              "description": "Mengonfirmasi pembayaran ke pengguna dan memperbarui status pesanan.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Response"
-            ],
-            "id": "08f29e7b-2613-4724-90ec-3b07bb128114",
-            "source": {
-              "cell": "6f7b10b0-151b-4406-9bce-ce0ed45be648",
-              "port": "0526cdce-f135-4275-a63d-ee671128475c"
-            },
-            "target": {
-              "cell": "0c117ca8-1114-443b-aab4-7ca3b19ef1c4",
-              "port": "fab7aaa7-21fa-4b98-932d-7ee2c707706f"
-            },
-            "vertices": [
-              {
-                "x": 840,
-                "y": 400
-              },
-              {
-                "x": 330,
-                "y": 450
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Payment Details",
               "description": "Mengirim detail pembayaran.",
               "outOfScope": false,
@@ -953,7 +892,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Payment \nRequest",
+              "name": "Payment \nValidation Request",
               "description": "Memvalidasi pembayaran kepada bank",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -965,7 +904,7 @@
               "threats": []
             },
             "labels": [
-              "Payment \nRequest"
+              "Payment \nValidation Request"
             ],
             "id": "26ce3d2f-c7a0-4ea1-8947-f7a249994c94",
             "source": {
@@ -980,56 +919,6 @@
               {
                 "x": 630,
                 "y": 250
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Payment \nResponse",
-              "description": "Mengirim respon kepada payment gateway.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Payment \nResponse"
-            ],
-            "id": "52a7f1da-4022-40dc-8ecd-f5a812d762b6",
-            "source": {
-              "cell": "090d39ac-e778-4ccb-b6a2-556d19ff38a3",
-              "port": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
-            },
-            "target": {
-              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
-              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
-            },
-            "vertices": [
-              {
-                "x": 620,
-                "y": 299
               }
             ]
           },
@@ -1080,6 +969,110 @@
               {
                 "x": 300,
                 "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment Validation\nResponse",
+              "description": "Mengirim respon kepada payment gateway.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Payment Validation\nResponse"
+            ],
+            "id": "52a7f1da-4022-40dc-8ecd-f5a812d762b6",
+            "source": {
+              "cell": "090d39ac-e778-4ccb-b6a2-556d19ff38a3",
+              "port": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
+            },
+            "target": {
+              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
+              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
+            },
+            "vertices": [
+              {
+                "x": 630,
+                "y": 320
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Order Confirmation",
+              "description": "Mengonfirmasi pembayaran ke pengguna dan memperbarui status pesanan.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Order Confirmation"
+            ],
+            "id": "08f29e7b-2613-4724-90ec-3b07bb128114",
+            "source": {
+              "cell": "6f7b10b0-151b-4406-9bce-ce0ed45be648",
+              "port": "0526cdce-f135-4275-a63d-ee671128475c"
+            },
+            "target": {
+              "cell": "0c117ca8-1114-443b-aab4-7ca3b19ef1c4",
+              "port": "fab7aaa7-21fa-4b98-932d-7ee2c707706f"
+            },
+            "vertices": [
+              {
+                "x": 840,
+                "y": 400
+              },
+              {
+                "x": 330,
+                "y": 450
               }
             ]
           }

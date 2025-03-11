@@ -145,7 +145,7 @@
             },
             "attrs": {
               "text": {
-                "text": "E-Commerce"
+                "text": "Order"
               },
               "body": {
                 "stroke": "#333333",
@@ -241,7 +241,7 @@
             "id": "88c4e6af-6295-42df-ba1d-6ad7e98aaad2",
             "data": {
               "type": "tm.Process",
-              "name": "E-Commerce",
+              "name": "Order",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -267,11 +267,13 @@
                 "text": "E-commerce \nDatabase"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -367,13 +369,66 @@
               "description": "Menyimpan data pesanan dan status pembayaran.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "0038344b-22f1-40db-a795-06c45dca9f34",
+                  "title": "SQL Injection",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Penyerang dapat menyuntikkan kode SQL berbahaya ke dalam input pengguna untuk mengakses atau mengubah data dalam database e-commerce.",
+                  "mitigation": "- Gunakan parameterized queries atau prepared statements.\n- Terapkan validasi input yang ketat. \n- Gunakan Web Application Firewall (WAF) untuk mendeteksi pola serangan SQL Injection.\n- Minimalkan hak akses database untuk mengurangi dampak serangan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "a4790888-d277-442e-95f7-2314af0c5628",
+                  "title": "Cross-Site Scripting (XSS)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Penyerang dapat menyisipkan skrip berbahaya dalam halaman e-commerce yang dijalankan di browser pengguna untuk mencuri informasi atau mengambil alih sesi pengguna.",
+                  "mitigation": "- Terapkan Content Security Policy (CSP).\n- Gunakan escaping dan sanitasi input pengguna.\n- Gunakan HTTP-only dan Secure flags untuk cookies.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "d6e74a6c-cbbe-42b7-b12d-d044bf1c3d43",
+                  "title": "Data Breach",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Data pelanggan seperti informasi pembayaran atau detail pribadi dapat diakses oleh pihak yang tidak berwenang.",
+                  "mitigation": "- Gunakan enkripsi data di database dan saat transit.\n- Batasi akses ke data sensitif dengan kontrol akses berbasis peran (RBAC). \n- Lakukan audit dan pemantauan berkala terhadap akses data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -788,56 +843,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Payment Details",
-              "description": "Mengirim detail pembayaran.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Payment Details"
-            ],
-            "id": "41f5f873-d07e-463a-842f-0088b9fcfbdb",
-            "source": {
-              "cell": "0c117ca8-1114-443b-aab4-7ca3b19ef1c4",
-              "port": "fab7aaa7-21fa-4b98-932d-7ee2c707706f"
-            },
-            "target": {
-              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
-              "port": "a39ed1fa-1fcb-4d81-82c1-0ce114196db5"
-            },
-            "vertices": [
-              {
-                "x": 250,
-                "y": 314
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Payment \nConfirmation",
               "description": "mengirimkan hasil transaksi ke e-commerce.",
               "outOfScope": false,
@@ -1075,6 +1080,76 @@
                 "y": 450
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment Details",
+              "description": "Mengirim detail pembayaran.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "2c5a2136-6325-4f9a-b537-ccf14df2d28f",
+                  "title": "Man-in-the-Middle Attack (MitM)",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Penyerang dapat mencegat komunikasi antara pengguna dan sistem e-commerce, mencuri informasi sensitif seperti detail pembayaran.",
+                  "mitigation": "- Gunakan enkripsi end-to-end dengan TLS/SSL.\n- Terapkan HTTP Strict Transport Security (HSTS).\n- Gunakan sertifikat digital yang valid.\n- Pantau lalu lintas jaringan untuk deteksi serangan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Payment Details"
+            ],
+            "id": "41f5f873-d07e-463a-842f-0088b9fcfbdb",
+            "source": {
+              "cell": "0c117ca8-1114-443b-aab4-7ca3b19ef1c4",
+              "port": "fab7aaa7-21fa-4b98-932d-7ee2c707706f"
+            },
+            "target": {
+              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
+              "port": "a39ed1fa-1fcb-4d81-82c1-0ce114196db5"
+            },
+            "vertices": [
+              {
+                "x": 250,
+                "y": 314
+              }
+            ]
           }
         ],
         "description": "e-payment STRIDE"
@@ -1082,6 +1157,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Afwan Mulia Pratama",
-    "threatTop": 2
+    "threatTop": 6
   }
 }

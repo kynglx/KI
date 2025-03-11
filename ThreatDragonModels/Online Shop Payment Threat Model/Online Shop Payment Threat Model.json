@@ -1,0 +1,27 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "Online Shop Payment Threat Model",
+    "owner": "Kayla Angeline Putri Silitonga",
+    "description": "Sistem pembayaran pada pembelian di online shop, mengidentifikasi potensi ancaman keamanan dalam sistem pembayaran, dan mengusulkan langkah mitigasi untuk mengurangi risiko ancaman yang ditemukan.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "e-payment",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.4.1",
+        "cells": [],
+        "description": "e-payment STRIDE"
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Afwan Mulia Pratama",
+    "threatTop": 0
+  }
+}

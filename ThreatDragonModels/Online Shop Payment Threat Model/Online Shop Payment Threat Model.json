@@ -19,8 +19,8 @@
         "cells": [
           {
             "position": {
-              "x": 80,
-              "y": 209
+              "x": 50,
+              "y": 220
             },
             "size": {
               "width": 112.5,
@@ -136,8 +136,8 @@
           },
           {
             "position": {
-              "x": 435,
-              "y": 104
+              "x": 385,
+              "y": 94
             },
             "size": {
               "width": 110,
@@ -255,8 +255,8 @@
           },
           {
             "position": {
-              "x": 750,
-              "y": 104
+              "x": 780,
+              "y": 100
             },
             "size": {
               "width": 120,
@@ -378,8 +378,8 @@
           },
           {
             "position": {
-              "x": 750,
-              "y": 250
+              "x": 760,
+              "y": 269
             },
             "size": {
               "width": 120,
@@ -501,12 +501,12 @@
           },
           {
             "position": {
-              "x": 440,
+              "x": 395,
               "y": 269
             },
             "size": {
-              "width": 100,
-              "height": 100
+              "width": 90,
+              "height": 90
             },
             "attrs": {
               "text": {
@@ -607,7 +607,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Payment\nGateway",
-              "description": "",
+              "description": "Sistem memproses pembayaran melalui Payment Gateway.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -638,8 +638,58 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
+              "name": "Order\nRequest",
+              "description": "Pengguna melakukan pemesanan produk di e-commerce.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Order\nRequest"
+            ],
+            "id": "1a90b123-5b23-4ad4-aaa1-fbad3aa61c6b",
+            "source": {
+              "cell": "0c117ca8-1114-443b-aab4-7ca3b19ef1c4",
+              "port": "fab7aaa7-21fa-4b98-932d-7ee2c707706f"
+            },
+            "target": {
+              "cell": "88c4e6af-6295-42df-ba1d-6ad7e98aaad2",
+              "port": "a39ed1fa-1fcb-4d81-82c1-0ce114196db5"
+            },
+            "vertices": [
+              {
+                "x": 270,
+                "y": 144
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
               "name": "Request",
-              "description": "",
+              "description": "Mengirim detail produk yang dipesan ke e-commerce.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -689,7 +739,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Response",
-              "description": "",
+              "description": "E-commerce merespon kembali dengan mengirim detail produk opsi pembayaran.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -738,158 +788,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Order\nRequest",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Order\nRequest"
-            ],
-            "id": "1a90b123-5b23-4ad4-aaa1-fbad3aa61c6b",
-            "source": {
-              "cell": "0c117ca8-1114-443b-aab4-7ca3b19ef1c4",
-              "port": "fab7aaa7-21fa-4b98-932d-7ee2c707706f"
-            },
-            "target": {
-              "cell": "88c4e6af-6295-42df-ba1d-6ad7e98aaad2",
-              "port": "a39ed1fa-1fcb-4d81-82c1-0ce114196db5"
-            },
-            "vertices": [
-              {
-                "x": 310,
-                "y": 140
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Payment\nRequest ",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Payment\nRequest "
-            ],
-            "id": "ea342f4b-86e0-4979-8ca5-a37717dca554",
-            "source": {
-              "cell": "0c117ca8-1114-443b-aab4-7ca3b19ef1c4",
-              "port": "fab7aaa7-21fa-4b98-932d-7ee2c707706f"
-            },
-            "target": {
-              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
-              "port": "a39ed1fa-1fcb-4d81-82c1-0ce114196db5"
-            },
-            "vertices": [
-              {
-                "x": 390,
-                "y": 290
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Request",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Request"
-            ],
-            "id": "a68dbd0b-5e7f-426d-9bfe-b53cecf0c9b1",
-            "source": {
-              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
-              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
-            },
-            "target": {
-              "cell": "090d39ac-e778-4ccb-b6a2-556d19ff38a3",
-              "port": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
-            },
-            "vertices": [
-              {
-                "x": 650,
-                "y": 230
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Response",
-              "description": "",
+              "description": "Mengonfirmasi pembayaran ke pengguna dan memperbarui status pesanan.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -902,19 +802,19 @@
             "labels": [
               "Response"
             ],
-            "id": "413d2f17-914e-496d-9c28-2d353aea62a3",
+            "id": "08f29e7b-2613-4724-90ec-3b07bb128114",
             "source": {
-              "cell": "090d39ac-e778-4ccb-b6a2-556d19ff38a3",
-              "port": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
+              "cell": "6f7b10b0-151b-4406-9bce-ce0ed45be648",
+              "port": "0526cdce-f135-4275-a63d-ee671128475c"
             },
             "target": {
-              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
-              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
+              "cell": "0c117ca8-1114-443b-aab4-7ca3b19ef1c4",
+              "port": "fab7aaa7-21fa-4b98-932d-7ee2c707706f"
             },
             "vertices": [
               {
-                "x": 680,
-                "y": 350
+                "x": 350,
+                "y": 250
               }
             ]
           },
@@ -938,8 +838,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Order \nResponse",
-              "description": "",
+              "name": "Payment Details",
+              "description": "Mengirim detail pembayaran.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -950,21 +850,121 @@
               "threats": []
             },
             "labels": [
-              "Order \nResponse"
+              "Payment Details"
             ],
-            "id": "b23f7ca6-b8ae-435c-912c-e4128cd9beca",
+            "id": "41f5f873-d07e-463a-842f-0088b9fcfbdb",
             "source": {
-              "cell": "88c4e6af-6295-42df-ba1d-6ad7e98aaad2",
-              "port": "a39ed1fa-1fcb-4d81-82c1-0ce114196db5"
-            },
-            "target": {
               "cell": "0c117ca8-1114-443b-aab4-7ca3b19ef1c4",
               "port": "fab7aaa7-21fa-4b98-932d-7ee2c707706f"
             },
+            "target": {
+              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
+              "port": "a39ed1fa-1fcb-4d81-82c1-0ce114196db5"
+            },
             "vertices": [
               {
-                "x": 300,
-                "y": 194
+                "x": 250,
+                "y": 314
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment \nConfirmation",
+              "description": "mengirimkan hasil transaksi ke e-commerce.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Payment \nConfirmation"
+            ],
+            "id": "c084ac8f-c0c2-4166-93a4-83a6158c4b16",
+            "source": {
+              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
+              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
+            },
+            "target": {
+              "cell": "6f7b10b0-151b-4406-9bce-ce0ed45be648",
+              "port": "0526cdce-f135-4275-a63d-ee671128475c"
+            },
+            "vertices": [
+              {
+                "x": 600,
+                "y": 250
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment \nRequest",
+              "description": "Memvalidasi pembayaran kepada bank",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Payment \nRequest"
+            ],
+            "id": "26ce3d2f-c7a0-4ea1-8947-f7a249994c94",
+            "source": {
+              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
+              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
+            },
+            "target": {
+              "cell": "090d39ac-e778-4ccb-b6a2-556d19ff38a3",
+              "port": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
+            },
+            "vertices": [
+              {
+                "x": 640,
+                "y": 299
               }
             ]
           },
@@ -989,7 +989,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Payment \nResponse",
-              "description": "",
+              "description": "Mengirim respon kepada payment gateway.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1002,9 +1002,59 @@
             "labels": [
               "Payment \nResponse"
             ],
-            "id": "37466601-9e0e-4408-a7a7-2ace12791037",
+            "id": "52a7f1da-4022-40dc-8ecd-f5a812d762b6",
             "source": {
+              "cell": "090d39ac-e778-4ccb-b6a2-556d19ff38a3",
+              "port": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
+            },
+            "target": {
               "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
+              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
+            },
+            "vertices": [
+              {
+                "x": 640,
+                "y": 370
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Order \nResponse",
+              "description": "Sistem menampilkan opsi pembayaran (kartu kredit, e-wallet, transfer bank, dll.).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Order \nResponse"
+            ],
+            "id": "d7772f4b-6a24-4998-8ff5-62562300d29b",
+            "source": {
+              "cell": "88c4e6af-6295-42df-ba1d-6ad7e98aaad2",
               "port": "a39ed1fa-1fcb-4d81-82c1-0ce114196db5"
             },
             "target": {
@@ -1013,8 +1063,8 @@
             },
             "vertices": [
               {
-                "x": 260,
-                "y": 299
+                "x": 300,
+                "y": 190
               }
             ]
           }

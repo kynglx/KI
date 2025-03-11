@@ -422,13 +422,6 @@
                 "informationDisclosure": 1,
                 "denialOfService": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -556,12 +549,12 @@
           },
           {
             "position": {
-              "x": 405,
-              "y": 254
+              "x": 390,
+              "y": 244
             },
             "size": {
-              "width": 90,
-              "height": 90
+              "width": 100,
+              "height": 100
             },
             "attrs": {
               "text": {
@@ -868,11 +861,11 @@
             },
             "vertices": [
               {
-                "x": 550,
-                "y": 380
+                "x": 600,
+                "y": 360
               },
               {
-                "x": 850,
+                "x": 840,
                 "y": 340
               }
             ]
@@ -1072,12 +1065,12 @@
             },
             "vertices": [
               {
-                "x": 840,
-                "y": 400
+                "x": 810,
+                "y": 420
               },
               {
                 "x": 330,
-                "y": 450
+                "y": 440
               }
             ]
           },

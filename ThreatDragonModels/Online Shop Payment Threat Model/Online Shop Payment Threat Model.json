@@ -19,8 +19,8 @@
         "cells": [
           {
             "position": {
-              "x": 50,
-              "y": 220
+              "x": 40,
+              "y": 184
             },
             "size": {
               "width": 112.5,
@@ -137,7 +137,7 @@
           {
             "position": {
               "x": 385,
-              "y": 94
+              "y": 84
             },
             "size": {
               "width": 110,
@@ -242,7 +242,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Order",
-              "description": "",
+              "description": "Proses pemesanan.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -255,7 +255,7 @@
           },
           {
             "position": {
-              "x": 870,
+              "x": 1250,
               "y": 94
             },
             "size": {
@@ -426,129 +426,6 @@
           },
           {
             "position": {
-              "x": 750,
-              "y": 220
-            },
-            "size": {
-              "width": 120,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Bank Database"
-              },
-              "topLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              },
-              "bottomLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "store",
-            "zIndex": 8,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "cea87ca8-eb2e-4e42-9354-0ebda40325f1"
-                },
-                {
-                  "group": "right",
-                  "id": "17f24ac8-d739-4991-81c9-08fe9dcdb6da"
-                },
-                {
-                  "group": "bottom",
-                  "id": "0526cdce-f135-4275-a63d-ee671128475c"
-                },
-                {
-                  "group": "left",
-                  "id": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
-                }
-              ]
-            },
-            "id": "090d39ac-e778-4ccb-b6a2-556d19ff38a3",
-            "data": {
-              "type": "tm.Store",
-              "name": "Bank Database",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isALog": false,
-              "isEncrypted": false,
-              "isSigned": false,
-              "storesCredentials": false,
-              "storesInventory": false,
-              "threats": []
-            }
-          },
-          {
-            "position": {
               "x": 390,
               "y": 244
             },
@@ -667,6 +544,38 @@
             }
           },
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Web Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Web Boundary"
+            ],
+            "id": "6692b8bf-a07c-4467-a225-80c12fe65fab",
+            "source": {
+              "x": 150,
+              "y": 120
+            },
+            "target": {
+              "x": 150,
+              "y": 370
+            },
+            "vertices": [
+              {
+                "x": 220,
+                "y": 230
+              }
+            ]
+          },
+          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -713,210 +622,6 @@
               {
                 "x": 270,
                 "y": 144
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Request",
-              "description": "Mengirim detail produk yang dipesan ke e-commerce.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Request"
-            ],
-            "id": "db18df54-6bfb-4579-b57d-33e3f0953edc",
-            "source": {
-              "cell": "88c4e6af-6295-42df-ba1d-6ad7e98aaad2",
-              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
-            },
-            "target": {
-              "cell": "6f7b10b0-151b-4406-9bce-ce0ed45be648",
-              "port": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
-            },
-            "vertices": [
-              {
-                "x": 600,
-                "y": 110
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Response",
-              "description": "E-commerce merespon kembali dengan mengirim detail produk opsi pembayaran.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Response"
-            ],
-            "id": "2df4d46a-7305-4eb8-8af3-8e309c563963",
-            "source": {
-              "cell": "6f7b10b0-151b-4406-9bce-ce0ed45be648",
-              "port": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
-            },
-            "target": {
-              "cell": "88c4e6af-6295-42df-ba1d-6ad7e98aaad2",
-              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
-            },
-            "vertices": [
-              {
-                "x": 640,
-                "y": 154
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Payment \nConfirmation",
-              "description": "mengirimkan hasil transaksi ke e-commerce.",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Payment \nConfirmation"
-            ],
-            "id": "c084ac8f-c0c2-4166-93a4-83a6158c4b16",
-            "source": {
-              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
-              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
-            },
-            "target": {
-              "cell": "6f7b10b0-151b-4406-9bce-ce0ed45be648",
-              "port": "0526cdce-f135-4275-a63d-ee671128475c"
-            },
-            "vertices": [
-              {
-                "x": 600,
-                "y": 360
-              },
-              {
-                "x": 840,
-                "y": 340
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Payment \nValidation Request",
-              "description": "Memvalidasi pembayaran kepada bank",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Payment \nValidation Request"
-            ],
-            "id": "26ce3d2f-c7a0-4ea1-8947-f7a249994c94",
-            "source": {
-              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
-              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
-            },
-            "target": {
-              "cell": "090d39ac-e778-4ccb-b6a2-556d19ff38a3",
-              "port": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
-            },
-            "vertices": [
-              {
-                "x": 630,
-                "y": 250
               }
             ]
           },
@@ -990,8 +695,258 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
+              "name": "Request",
+              "description": "Mengirim detail produk yang dipesan ke e-commerce.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Request"
+            ],
+            "id": "db18df54-6bfb-4579-b57d-33e3f0953edc",
+            "source": {
+              "cell": "88c4e6af-6295-42df-ba1d-6ad7e98aaad2",
+              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
+            },
+            "target": {
+              "cell": "8e4aa868-5f76-4acf-8ff2-579bb259851f",
+              "port": "cf04e098-7a73-4559-bf72-64e5887099f3"
+            },
+            "vertices": [
+              {
+                "x": 600,
+                "y": 110
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response",
+              "description": "E-commerce telah menerima request dan mengirim respon kembali.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Response"
+            ],
+            "id": "2df4d46a-7305-4eb8-8af3-8e309c563963",
+            "source": {
+              "cell": "8e4aa868-5f76-4acf-8ff2-579bb259851f",
+              "port": "cf04e098-7a73-4559-bf72-64e5887099f3"
+            },
+            "target": {
+              "cell": "88c4e6af-6295-42df-ba1d-6ad7e98aaad2",
+              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
+            },
+            "vertices": [
+              {
+                "x": 640,
+                "y": 154
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Order Details",
+              "description": "Detail pesanan dikirim untuk disimpan database.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Order Details"
+            ],
+            "id": "018d39a2-0194-459c-8d5b-8bbbb5881557",
+            "source": {
+              "cell": "8e4aa868-5f76-4acf-8ff2-579bb259851f",
+              "port": "35125222-3a23-4fc6-9798-adde11d1f658"
+            },
+            "target": {
+              "cell": "6f7b10b0-151b-4406-9bce-ce0ed45be648",
+              "port": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
+            },
+            "vertices": [
+              {
+                "x": 1080,
+                "y": 90
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Order Details",
+              "description": "Detail pesanan diambil kembali oleh e-commerce.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Order Details"
+            ],
+            "id": "af3b5645-9426-467e-85b6-8f874fb7c533",
+            "source": {
+              "cell": "6f7b10b0-151b-4406-9bce-ce0ed45be648",
+              "port": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
+            },
+            "target": {
+              "cell": "8e4aa868-5f76-4acf-8ff2-579bb259851f",
+              "port": "35125222-3a23-4fc6-9798-adde11d1f658"
+            },
+            "vertices": [
+              {
+                "x": 1050,
+                "y": 150
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment \nValidation Request",
+              "description": "Memvalidasi pembayaran kepada bank.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Payment \nValidation Request"
+            ],
+            "id": "26ce3d2f-c7a0-4ea1-8947-f7a249994c94",
+            "source": {
+              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
+              "port": "062d8beb-11fc-4932-95ca-7b06db441068"
+            },
+            "target": {
+              "cell": "c3beefdf-2e68-4613-826c-776e00684db3",
+              "port": "cf04e098-7a73-4559-bf72-64e5887099f3"
+            },
+            "vertices": [
+              {
+                "x": 760,
+                "y": 250
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
               "name": "Payment Validation\nResponse",
-              "description": "Mengirim respon kepada payment gateway.",
+              "description": "Mengirim respon hasil validasi kepada payment gateway.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -1006,8 +961,8 @@
             ],
             "id": "52a7f1da-4022-40dc-8ecd-f5a812d762b6",
             "source": {
-              "cell": "090d39ac-e778-4ccb-b6a2-556d19ff38a3",
-              "port": "12cfd7cf-698b-4f8c-8b34-df50f142c7f3"
+              "cell": "c3beefdf-2e68-4613-826c-776e00684db3",
+              "port": "cf04e098-7a73-4559-bf72-64e5887099f3"
             },
             "target": {
               "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
@@ -1015,8 +970,62 @@
             },
             "vertices": [
               {
-                "x": 630,
-                "y": 320
+                "x": 750,
+                "y": 330
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment \nConfirmation",
+              "description": "Mengirimkan hasil transaksi ke e-commerce.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Payment \nConfirmation"
+            ],
+            "id": "c084ac8f-c0c2-4166-93a4-83a6158c4b16",
+            "source": {
+              "cell": "8e43d061-c2eb-4e31-b398-0924caa6b409",
+              "port": "2058ba5a-b644-4f8c-8aae-f2783c6e2f63"
+            },
+            "target": {
+              "cell": "8e4aa868-5f76-4acf-8ff2-579bb259851f",
+              "port": "ac10fbf5-2cf1-48d6-9357-b6912b095a1c"
+            },
+            "vertices": [
+              {
+                "x": 520,
+                "y": 400
+              },
+              {
+                "x": 670,
+                "y": 380
               }
             ]
           },
@@ -1056,8 +1065,8 @@
             ],
             "id": "08f29e7b-2613-4724-90ec-3b07bb128114",
             "source": {
-              "cell": "6f7b10b0-151b-4406-9bce-ce0ed45be648",
-              "port": "0526cdce-f135-4275-a63d-ee671128475c"
+              "cell": "8e4aa868-5f76-4acf-8ff2-579bb259851f",
+              "port": "ac10fbf5-2cf1-48d6-9357-b6912b095a1c"
             },
             "target": {
               "cell": "0c117ca8-1114-443b-aab4-7ca3b19ef1c4",
@@ -1065,8 +1074,8 @@
             },
             "vertices": [
               {
-                "x": 810,
-                "y": 420
+                "x": 720,
+                "y": 440
               },
               {
                 "x": 330,
@@ -1143,6 +1152,294 @@
                 "y": 314
               }
             ]
+          },
+          {
+            "position": {
+              "x": 1250,
+              "y": 284
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Bank"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "b46279fd-8f48-484c-8659-74888ccd2cef"
+                },
+                {
+                  "group": "right",
+                  "id": "35125222-3a23-4fc6-9798-adde11d1f658"
+                },
+                {
+                  "group": "bottom",
+                  "id": "ac10fbf5-2cf1-48d6-9357-b6912b095a1c"
+                },
+                {
+                  "group": "left",
+                  "id": "cf04e098-7a73-4559-bf72-64e5887099f3"
+                }
+              ]
+            },
+            "id": "c3beefdf-2e68-4613-826c-776e00684db3",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Bank",
+              "description": "Melakukan validasi atas pembayaran yang dilakukan.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 724,
+              "y": 94
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "E-commerce"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "b46279fd-8f48-484c-8659-74888ccd2cef"
+                },
+                {
+                  "group": "right",
+                  "id": "35125222-3a23-4fc6-9798-adde11d1f658"
+                },
+                {
+                  "group": "bottom",
+                  "id": "ac10fbf5-2cf1-48d6-9357-b6912b095a1c"
+                },
+                {
+                  "group": "left",
+                  "id": "cf04e098-7a73-4559-bf72-64e5887099f3"
+                }
+              ]
+            },
+            "id": "8e4aa868-5f76-4acf-8ff2-579bb259851f",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Actor",
+              "name": "E-commerce",
+              "description": "Platform jual-beli online  yang digunakan oleh customer.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Restricted Network",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Restricted Network"
+            ],
+            "id": "ebf71aa5-854f-40b4-906a-82cda4c811e0",
+            "source": {
+              "x": 942,
+              "y": 72
+            },
+            "target": {
+              "x": 950,
+              "y": 430
+            },
+            "vertices": [
+              {
+                "x": 1050,
+                "y": 240
+              }
+            ],
+            "zIndex": 13
+          },
+          {
+            "position": {
+              "x": 100,
+              "y": 420
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Kayla Angeline Putri Silitonga\n235150200111021"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "3842b5fb-77eb-4919-acf3-61fdac9a58f9",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Text",
+              "name": "Kayla Angeline Putri Silitonga\n235150200111021",
+              "hasOpenThreats": false
+            }
           }
         ],
         "description": "e-payment STRIDE"
@@ -1150,6 +1447,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Afwan Mulia Pratama",
-    "threatTop": 6
+    "threatTop": 7
   }
 }
